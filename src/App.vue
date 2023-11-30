@@ -2,9 +2,6 @@
 
 <script setup>
 import {reactive, ref, watch} from "vue";
-import DropDown from "@/components/DropDown.vue";
-
-
 /*
 *item can be an Array list of simple item
 * or it can be an Array list of Object with keys: text, value
