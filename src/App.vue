@@ -21,6 +21,7 @@ watch(()=>selected, (newVal) => {
 
   <main>
     <DropDown
+        label="dropdown"
         :items="items"
         v-model="selected"
         multi-select

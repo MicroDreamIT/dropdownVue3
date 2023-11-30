@@ -5,8 +5,8 @@ its behavior.
 
 Component Name: DropDown
 Type: Global
-Targeted Props: items, multiSelect, text-name, value-name, return-object
-Completed: items, multiSelect
+Targeted Props: items, label, multiSelect, text-name, value-name, return-object
+Completed: label, items, multiSelect
 
 @todo: text-name, value-name, return-object,
 @todo: need to remove value from input
@@ -27,6 +27,11 @@ const props = defineProps({
     type: Boolean,
     default: false,
     required: false
+  },
+  label:{
+    type: String,
+    default: 'dropdown',
+    required: true
   },
   modelValue: {
     type: Array,
@@ -105,6 +110,9 @@ const hideDropdown = () => {
     <p v-for="selected in selectedItems">
       {{ selected }}
     </p>
+    <label>
+      {{label}}
+    </label>
     <input
         readonly
         type="text"
