@@ -1,8 +1,21 @@
+
+
 <script setup>
-import {reactive, ref} from "vue";
+import {reactive, ref, watch} from "vue";
 import DropDown from "@/components/DropDown.vue";
+
+
+/*
+*item can be an Array list of simple item
+* or it can be an Array list of Object with keys: text, value
+* for example [{text:'a', value:1}, {text:'b', value:2}]
+ */
 const items=reactive([1, 2, 3])
 const selected = ref(null)
+
+watch(()=>selected, (newVal) => {
+}, { deep: true });
+
 </script>
 
 <template>

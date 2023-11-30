@@ -2,5 +2,7 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'
-
-createApp(App).mount('#app')
+import clickOutside from './directives/clickOutside'
+createApp(App)
+    .directive("click-outside", clickOutside)
+    .mount('#app')
